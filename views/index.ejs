@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+        *{
+    padding: 0;
+    margin: 0;
+
+}
+    
+    .title{
+    margin-top: 10px;
+    align-items: center;
+    margin-left: 440px;
+    color: whitesmoke;
+    background-color:rgb(51, 70, 147);
+    text-align: center;
+}
+    
+    .topbar{
+    padding: 1000;
+    margin: 0;
+    background-color: rgb(51, 70, 147);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    }
+    .h1{
+    /* align-self: center; */
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    }
+    .quote{
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    font-weight: 3000px;
+    color: rgb(255, 255, 255);
+    }
+    .h3{
+    align-items: center;
+    display: flexbox;
+    margin-bottom: 0;
+    color: whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    }
+    .table{
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 90%;
+        align-items: center;
+        align-self: center;
+        counter-reset: section; 
+        margin-top: 20px;
+    }
+    .count:before {
+  counter-increment: section;
+  content: counter(section);
+}
+
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="topbar">
+        <!-- D:\jio yt tut\a logo for a co 0.png -->
+        <a href="index.html"><img src="./a logo for a co 0.png" alt="" width="130px" height="150" ></a>
+       
+       <div class="title">
+        <h1 class="h1">LAKEVIEW UNIVERSITY</h1>
+        <p>
+            <div class="quote">Discover Limitless Horizons at Lakeview College</div>
+            <br><br>
+            <h3 class="h3">Selected Students List</h3>
+        </p>
+       </div><!--end of the title div-->
+       
+        </div><!--end of div topbar-->
+
+    <!-- below is the syntax to display the content in html 
+        app.get('/',(req,res)=>{
+        let name
+        res.render('index',{
+            userName: name= 'Marina'
+        })
+    })
+    <h1> here</h1>-->
+    <div id="seatsLeft"></div>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sr No.</th>
+            <th scope="col">name</th>
+            <th scope="col">Program </th>
+            <th scope="col">Course</th>
+            <th scope="col">email-id</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% studentlist.forEach(notes=>{ %>
+                <tr>
+                    <th scope="row" class="count"></th>
+                    <td><%=notes.name %></td>
+                    <td><%=notes.programme %></td>
+                    <td><%=notes.course %></td>
+                    <td><%=notes.email %></td>
+
+                  </tr>
+
+            <%})%>
+          
+          
+        </tbody>
+      </table>
+
+      
+</body>
+
+</html>
